@@ -26,3 +26,7 @@ log_ex.hello()
 
 ```
 
+![alt text](./example1.png "Example 1")
+
+
+
