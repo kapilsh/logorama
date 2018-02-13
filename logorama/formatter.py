@@ -14,5 +14,5 @@ class DateTimeFormatter(logging.Formatter):
         dt = datetime.fromtimestamp(ts // 1000000000, tz=pytz.utc)
         dt = dt.astimezone(tz=pytz.timezone(LOGORAMA_TZ))
         s = "{}.{}".format(
-            dt.strftime("%Y-%m-%d %H:%M:%S"), ts % 1000000000)
+            dt.strftime("%Y-%m-%d %H:%M:%S"), int(ts % 1000000000))
         return s
