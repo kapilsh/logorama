@@ -60,6 +60,9 @@ log_ex.logger.setLevel(logging.DEBUG)
 log_ex.hello()
 ```
 
+![alt text](./example2.png "Example 2")
+
+
 
 
 
