@@ -1,7 +1,7 @@
 import logging
 import colorama
 
-from settings import LOGORAMA_COLORS
+from .settings import LOGORAMA_COLORS
 
 
 class ColoredStreamHandler(logging.StreamHandler):

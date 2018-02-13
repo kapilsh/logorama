@@ -3,19 +3,20 @@ import logging
 
 from colorama import init
 
-from formatter import DateTimeFormatter
-from stream import ColoredStreamHandler
-from settings import LOGORAMA_DEFAULT_LEVEL, LOGORAMA_DISABLE_COLORS
+from .formatter import DateTimeFormatter
+from .stream import ColoredStreamHandler
+from .settings import LOGORAMA_DEFAULT_LEVEL, LOGORAMA_DISABLE_COLORS, \
+    LOGORAMA_DEFAULT_FORMAT
 
 
-formatter = DateTimeFormatter()
+log_formatter = DateTimeFormatter(LOGORAMA_DEFAULT_FORMAT)
 
-formatter.default_msec_format = "%s.%03d"
+log_formatter.default_msec_format = "%s.%03d"
 if LOGORAMA_DISABLE_COLORS:
     ch = logging.StreamHandler(sys.stdout)
 else:
     ch = ColoredStreamHandler()
-ch.setFormatter(formatter)
+ch.setFormatter(log_formatter)
 logger = logging.getLogger()
 logger.addHandler(ch)
 logger.setLevel(logging.INFO)

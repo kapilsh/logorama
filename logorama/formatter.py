@@ -5,7 +5,7 @@ from datetime import datetime
 
 import pytz
 
-from settings import LOGORAMA_TZ
+from .settings import LOGORAMA_TZ
 
 
 class DateTimeFormatter(logging.Formatter):
