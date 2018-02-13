@@ -37,6 +37,8 @@ import colorama
 
 from logorama import logger, BaseLogger
 
+BaseLogger.LOG_LEVEL = logging.DEBUG
+
 logger.setLevel(logging.DEBUG)
 
 logger.debug("Debugging...")
@@ -56,8 +58,8 @@ class LogExample(BaseLogger):
 
 
 log_ex = LogExample()
-log_ex.logger.setLevel(logging.DEBUG)
 log_ex.hello()
+
 ```
 
 ![alt text](./example2.png "Example 2")
