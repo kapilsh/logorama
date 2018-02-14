@@ -1,6 +1,12 @@
 # logorama
 Light-weight python colored logging package
 
+To install:
+
+```
+pip install logorama
+```
+
 Here is a simple example
 
 ```
